@@ -166,18 +166,23 @@ Karambaの各コンポーネントを接続して解析を実行し、My(y軸周
 以下はコンポーネントの接続例です。
 
 ![](img/section.png)
+
 *断面・材料定義*
 
 ![](img/analysis.png)
+
 *解析部*
 
 ![](img/output.png)
+
 *応力度計算*
 
 ![](img/canvas_all.png)
+
 *全体図*
 
 ![](img/archi.png "出力例")
+
 *出力例*
 
 各要素に生じる応力度（単位面積当たりの力）は下式であらわされます。応力度は絶対値で評価します。
@@ -196,33 +201,38 @@ Maths　-> script -> Evaluate
 
 Karamba3DのCrossSectionで定義した断面はDissassemble CrossSectionで出力できます。Free版ではこの機能は使えませんので、代表的な断面性能の計算式を掲載しておきます。
 
-+ 正方形角形鋼管（柱せい$D$ x 板厚$t$）
-$$ A  = D^2- (D-2t)^2 $$
-$$ I_y = \{ D^4 - (D-2t)^4 \} /12 $$
-$$ Z_y = I \cdot 2/D = \frac{ D^4 - (D-2t)^4 }{ 6D } $$ 
-
-+ 円形鋼管（直径$D$ x 板厚$t$）
++ 正方形角形鋼管（柱せい $D$ x 板厚 $t$ ）
 ```math
-A  = \pi  \{ D^2 - (D-2t)^2 \}/4
+A  = D^2- (D-2t)^2
 ```
 ```math
-I_y = \pi  \{D^4 - (D-2t)^4 \} /64
+I_y = \frac{ D^4 - (D-2t)^4 }{12}
+```
+```math
+Z_y = I \cdot 2/D = \frac{ D^4 - (D-2t)^4 }{ 6D }
+```
+
++ 円形鋼管（直径 $D$ x 板厚 $t$ ）
+```math
+A  = \pi  \frac{ D^2 - (D-2t)^2 }{4}
+```
+```math
+I_y = \pi  \frac{D^4 - (D-2t)^4 }{64}
 ```
 ```math
 Z_y = I \cdot 2/D  = \pi  \frac{ D^4 - (D-2t)^4 }{32D} 
 ```
 
 + H形鋼（梁せい $H$  x 梁幅 $B$ x ウェブ厚 $t_w$ x フランジ厚 $t_f$ ）
-$ A  = B\cdot D- (B -t_w)\cdot (D-2t_f) $
-$ I_y = \{ B\cdot D^3 - (B -t_w)\cdot (D-2t_f)^3 \} /12 $
-$ Z_y = I \cdot 2/D = \frac{ B\cdot D^3 - (B -t_w)\cdot (D-2t_f)^3 } {6D}$
-
-<!-- 
-| 種別        | 正方形角形鋼管 | 円形鋼管 | H形鋼(強軸) |
-|:-----------|------------:|:------------:|:------------:|
-| A       | $ D^2- (D-2t)^2 $        | $ \pi  \frac{ D^2 - (D-2t)^2 }{4} $       | $  B\cdot D- (B -t_w)\cdot (D-2t_f) $ |
-| I     | $ \frac { D^4 - (D-2t)^4 } {12} $     | $ \pi  \frac{D^4 - (D-2t)^4 } {64} $ | $ \frac{ B\cdot D^3 - (B -t_w)\cdot (D-2t_f)^3 } {12} $ |
-| Z       | $  \frac{ D^4 - (D-2t)^4 }{ 6D } $        | $ \pi  \frac{ D^4 - (D-2t)^4 } {32D}$        | $ \frac{ B\cdot D^3 - (B -t_w)\cdot (D-2t_f)^3 } {6D}$ | -->
+```math
+A  = B\cdot D- (B -t_w)\cdot (D-2t_f)
+```
+```math
+I_y = \frac{ B\cdot D^3 - (B -t_w)\cdot (D-2t_f)^3}{12}
+```
+```math
+Z_y = I \cdot 2/D = \frac{ B\cdot D^3 - (B -t_w)\cdot (D-2t_f)^3 } {6D}
+```
 
 # 5. パラメータースタディについて
 
