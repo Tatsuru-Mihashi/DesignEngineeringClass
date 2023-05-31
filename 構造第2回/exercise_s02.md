@@ -67,7 +67,7 @@ Karamba3Dは3次元の骨組しかモデル化できないので、材軸方向�
 
 O - 400 x 12（直径400mm、板厚12mmの円形鋼管）
 
-( 断面積 A=146.3cm<sup>2</sup>, 断面係数Zy=1378cm<sup>3</sup>, 断面二次モーメントIy=27552cm<sup>4</sup> )
+( 断面積 A=227.4cm<sup>2</sup>, 断面係数Zy=2068cm<sup>3</sup>, 断面二次モーメントIy=41368cm<sup>4</sup> )
 
 材料 400級（SN400 or STKN400）
 ( E=205000N/mm<sup>2</sup>, 短期許容応力度f=235N/mm<sup>2</sup> )
